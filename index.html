@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Portfolio of Harsh Kumar, an Electronics Engineering student focused on software development, data structures, and practical projects."
+  >
+  <title>Harsh Kumar | Portfolio</title>
+  <script>document.documentElement.classList.add('is-intro-active');</script>
+  <noscript>
+    <style>
+      html.is-intro-active .terminal-shell { opacity: 1 !important; filter: none !important; pointer-events: auto !important; }
+      html.is-intro-active .boot-screen { display: none !important; }
+    </style>
+  </noscript>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true">
+    <span class="scroll-progress-bar" id="scroll-progress-bar"></span>
+  </div>
+  <div class="boot-screen" id="boot-screen" tabindex="0" role="button" aria-label="Skip intro">
+    <div class="boot-screen-inner">
+      <div class="boot-screen-terminal" id="boot-screen-terminal" aria-live="polite"></div>
+      <p class="boot-screen-skip">Click anywhere to skip</p>
+    </div>
+  </div>
+  <div class="scene" aria-hidden="true">
+    <div class="parallax-layer layer-grid" data-depth="10"></div>
+    <div class="parallax-layer layer-glow layer-glow-left" data-depth="22"></div>
+    <div class="parallax-layer layer-glow layer-glow-right" data-depth="16"></div>
+    <div class="parallax-layer layer-noise" data-depth="6"></div>
+  </div>
+
+  <main class="terminal-shell">
+    <header class="terminal-chrome">
+      <div class="chrome-dots" aria-hidden="true">
+        <span class="chrome-dot chrome-dot-red"></span>
+        <span class="chrome-dot chrome-dot-blue"></span>
+        <span class="chrome-dot chrome-dot-green"></span>
+      </div>
+      <p class="terminal-path">D:\portfolio\developer-portfolio.exe</p>
+      <div class="chrome-actions">
+        <nav class="command-nav" aria-label="Command navigation">
+          <button class="command-chip" type="button" data-target="intro" data-scramble="boot">
+            boot
+          </button>
+          <button class="command-chip" type="button" data-target="about" data-scramble="about">
+            about
+          </button>
+          <button class="command-chip" type="button" data-target="skills" data-scramble="skills">
+            skills
+          </button>
+          <button class="command-chip" type="button" data-target="projects" data-scramble="projects">
+            projects
+          </button>
+          <button class="command-chip" type="button" data-target="contact" data-scramble="contact">
+            contact
+          </button>
+        </nav>
+        <button
+          class="mode-toggle"
+          id="mode-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Switch to clean minimal portfolio view"
+        >
+          <span class="mode-toggle-label">terminal</span>
+          <span class="mode-toggle-label">minimal</span>
+          <span class="mode-toggle-thumb" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="panel panel-hero" id="intro">
+      <div class="panel-heading">
+        <span class="prompt">$</span>
+        <span class="heading-command" data-scramble="launch intro" data-minimal-label="Overview">launch intro</span>
+      </div>
+      <div class="typing-terminal" id="typing-terminal" aria-live="polite"></div>
+      <div class="minimal-overview" id="minimal-overview" aria-live="polite">
+        <p class="minimal-overview-kicker">Portfolio / Overview</p>
+        <h1 class="minimal-overview-title" id="minimal-overview-title">Harsh Kumar</h1>
+        <p class="minimal-overview-intro" id="minimal-overview-intro">
+          I code to build real, practical systems that solve problems.
+        </p>
+        <p class="minimal-overview-summary" id="minimal-overview-summary">
+          Electronics Engineering Student | Aspiring Software Developer
+        </p>
+        <div class="minimal-overview-actions" id="minimal-overview-actions"></div>
+      </div>
+      <div class="terminal-console" id="terminal-console">
+        <div class="terminal-console-header">
+          <span class="terminal-console-label">interactive shell</span>
+          <span class="terminal-console-status" id="terminal-status">Type 'help' to explore</span>
+        </div>
+        <div class="terminal-console-body">
+          <div class="terminal-stream" id="terminal-output" aria-live="polite" aria-atomic="false"></div>
+          <form class="terminal-form" id="terminal-form" autocomplete="off">
+            <label class="terminal-input-row" for="terminal-input">
+              <span class="terminal-user-prompt">HarshKumar@portfolio:~$</span>
+              <input
+                class="terminal-input"
+                id="terminal-input"
+                name="command"
+                type="text"
+                spellcheck="false"
+                autocomplete="off"
+                autocapitalize="off"
+                aria-label="Interactive terminal command input"
+              >
+            </label>
+            <div class="terminal-assist" id="terminal-assist">Type 'help' to explore</div>
+          </form>
+        </div>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <span class="status-label">name</span>
+          <strong class="status-value" id="profile-name">Harsh Kumar</strong>
+        </article>
+        <article class="status-card">
+          <span class="status-label">role</span>
+          <strong class="status-value" id="profile-role">Electronics Engineering Student | Aspiring Software Developer</strong>
+        </article>
+        <article class="status-card">
+          <span class="status-label">focus</span>
+          <strong class="status-value" id="profile-focus">Data structures, development, and hands-on work with AI tools</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="about">
+      <div class="panel-heading">
+        <span class="prompt">$</span>
+        <span class="heading-command" data-scramble="cat about.txt" data-minimal-label="About">cat about.txt</span>
+      </div>
+      <div class="terminal-output" id="about-output"></div>
+    </section>
+
+    <section class="panel" id="skills">
+      <div class="panel-heading">
+        <span class="prompt">$</span>
+        <span class="heading-command" data-scramble="cat skills.txt" data-minimal-label="Skills">cat skills.txt</span>
+      </div>
+      <div class="terminal-output" id="skills-output"></div>
+    </section>
+
+    <section class="panel" id="projects">
+      <div class="panel-heading">
+        <span class="prompt">$</span>
+        <span class="heading-command" data-scramble="ls projects/ --verbose" data-minimal-label="Projects">ls projects/ --verbose</span>
+      </div>
+      <div class="project-results" id="project-results"></div>
+    </section>
+
+    <section class="panel" id="contact">
+      <div class="panel-heading">
+        <span class="prompt">$</span>
+        <span class="heading-command" data-scramble="cat contact.txt" data-minimal-label="Contact">cat contact.txt</span>
+      </div>
+      <div class="contact-output" id="contact-output"></div>
+    </section>
+
+    <footer class="terminal-footer">
+      <span class="prompt">$</span>
+      <span class="footer-copy" data-scramble="Built and designed by Harsh Kumar">Built and designed by Harsh Kumar</span>
+    </footer>
+  </main>
+</body>
+</html>
